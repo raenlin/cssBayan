@@ -6,26 +6,56 @@
 
 body {
     font-family: sans-serif;
-    width: 50vw;
-    margin: 0 auto;
-}
-
-h1 {
-    align-items: center;
-}
-
-details > summary {
-    list-style: none;
-}
-
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    font-size: 100%;    
+    background-color: bisque;
+    padding-top: 50px;
+    
 }
 
 .accordeon {
+    width: 50%;
+    margin: 20px auto;
+    cursor: pointer;
 }
+/**
+.accordeon-image {
+    display: none;
+    cursor: pointer;
+    
+    
+}
+**/
+
+
+
+.accordeon-title {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    cursor: pointer;
+}
+
+.accordeon-input {
+    appearance: none;
+    position: absolute;
+}
+/**
+.accordeon-input:focus + .accordeon-image {
+    display: block;
+    
+}
+
+.accordeon-input:hover + .accordeon-image {
+    display: block;
+    
+}
+**/
+
+.accordeon-item {
+    max-width: 100%;
+    margin-bottom: 30px;    
+}
+
 
