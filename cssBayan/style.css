@@ -7,14 +7,14 @@
 html {
     width: 100vw;
     overflow-y: scroll;
+    height: 100vw;
 }
 
 body {
     font-family: sans-serif;
     font-size: 100%;    
     background-color: bisque;
-    padding-top: 50px;
-    
+    padding-top: 50px;    
 }
 
 h1 {
@@ -24,14 +24,29 @@ font-size: 2.5rem;
 .div-title {
     width: 50%;
     margin: 0 auto;
+    border-bottom: 1px solid grey; 
 }
 
 .accordeon {
     width: 50%;
     margin: 20px auto;
     cursor: pointer;
+    
 }
 
+
+.accordeon-title h3 {
+    color: blue;
+}
+
+.accordeon-input:checked + .accordeon-title h3 {
+    color: black;
+}
+
+
+.accordeon:hover .accordeon-item h3 {
+    color:black;
+}
 
 .accordeon-title {
     display: flex;
@@ -42,11 +57,21 @@ font-size: 2.5rem;
 }
 
 h3 {
-    font-size: 1.5rem;
-    
+    font-size: 1.5rem;   
 }
 
+.accordeon-title:hover .icon {
+    transform: rotate(-45deg);
+}
 
+.accordeon .accordeon-item .accordeon-title .icon {
+    opacity: 0;
+        
+}
+
+.accordeon:hover .accordeon-item .accordeon-title .icon {
+    opacity: 1;
+}
 
 .accordeon-item {
     max-width: 100%;
@@ -67,23 +92,24 @@ h3 {
     display: block;
     margin: 1rem auto;
     padding-bottom: 1rem;
-    
-    
+      
 }
 
 .accordeon-input {
     opacity: 0;
 }
 
-.accordeon-input:hover + .accordeon-title + .accordeon-image {
+
+.accordeon-input:checked + .accordeon-title + .accordeon-image {
+    height: 100%;        
+}
+
+.accordeon-item:hover .accordeon-title + .accordeon-image {
     height: 100%;    
     
 }
 
-.accordeon-input:checked + .accordeon-title + .accordeon-image {
-    height: 100%;    
-    
-}
+
 
 
 
