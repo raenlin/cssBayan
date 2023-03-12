@@ -18,8 +18,15 @@ body {
 }
 
 h1 {
-font-size: 2.5rem;
+    font-size: 3vw;
 }
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 5.5vw;
+    }
+}
+
 
 .div-title {
     width: 50%;
@@ -57,24 +64,32 @@ font-size: 2.5rem;
 }
 
 h3 {
-    font-size: 1.5rem;   
+    font-size: 1.5vw;   
 }
 
-.accordeon-title:hover .icon {
-    transform: rotate(-45deg);
+@media (max-width: 320px) {
+    h3 {
+        font-size: 3.5vw;
+    }
 }
 
 .accordeon .accordeon-item .accordeon-title .icon {
-    opacity: 0;
-        
+    opacity: 0;        
 }
 
 .accordeon:hover .accordeon-item .accordeon-title .icon {
     opacity: 1;
 }
 
+@media (max-width: 820px) {
+    .accordeon .accordeon-item .accordeon-title .icon {
+        display: none;        
+    }
+}
+
 .accordeon-item {
     max-width: 100%;
+    margin-top: -1rem;
     margin-bottom: 1rem; 
     border-bottom: 1px solid grey;   
 }
@@ -84,6 +99,8 @@ h3 {
     display: block;
     overflow: hidden;
     cursor: pointer;   
+    opacity: 0;
+    transition: all 0.5s ease-in;
 }
 
 
@@ -92,7 +109,21 @@ h3 {
     display: block;
     margin: 1rem auto;
     padding-bottom: 1rem;
-      
+       
+}
+
+@media (max-width: 320px) {
+    .accordeon-image img {
+        width: 60%;
+        display: block;
+        margin: 0.1rem auto;
+        padding-bottom: 1rem;
+           
+    }
+}
+
+.accordeon-item .accordeon-title + .accordeon-image img {
+    opacity: 1;
 }
 
 .accordeon-input {
@@ -101,13 +132,16 @@ h3 {
 
 
 .accordeon-input:checked + .accordeon-title + .accordeon-image {
-    height: 100%;        
+    height: 100%;   
+    opacity: 1;      
 }
 
+
 .accordeon-item:hover .accordeon-title + .accordeon-image {
-    height: 100%;    
-    
+    height: 100%;      
+    opacity: 1; 
 }
+
 
 
 
